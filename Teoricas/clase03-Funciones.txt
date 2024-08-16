@@ -1,0 +1,75 @@
+/* ------- FUNCIONES ----------- */
+
+Se trbaja en la zona de pial
+    Almacena las variables locales de las funciones asi como tambien
+    los registros de activacion 
+
+Parametros -->  Funcion  --> Valor
+
+Declaracion de funciones:
+
+    Funciones con retorno de valor 
+        Tipo_de_dato Nombre_de_la_funcion (parametros){
+
+
+
+            return valor;
+        }
+
+    Funciones sin retorno de valor
+        void Nombre_de_la_funcion (parametros){
+
+
+
+        }
+
+Es importante usar prototipos de funciones
+    Antes de la funcion main() voy a agregar el prototipo de la funcion 
+
+PASAJE DE PARAMETROS ------
+
+
+    Pasaje por valor
+
+        int main(){
+            int a,b;
+            a=5;
+            b=1;
+            suma(a,b);
+
+            return 0;
+        }
+
+        void suma(int c, int d){
+            int result;         //variable local de la funcion
+            result= c+d;
+            printf.... 
+        }
+
+    Pasaje por direccion 
+
+        int main(){
+            int a,b;
+            a=5;
+            b=1;
+            suma(&a,&b);        //le paso las direcciones de las variables 
+
+            return 0;
+        }
+
+        void suma(int *c, int *d){  //declaro variables del tipo punteros
+            int result;
+            result= *c + *d;    //accede a los datos almacenados en las direcciones
+            printf.... 
+        }
+
+    Ventajas de pasar por direccion: 
+        modificar multiples valores: Si una funcion necesita modificar mas de un valor y se desea visualizar los cambios fuera de la funcion 
+
+        eficiencia: pasar grandes estructuras de datos o matrices por valor puede ser ineficiente en terminos de memoria y tiempo de ejecucion.
+            Pasarlos por direccion puede evitar la copia de grandes cantidades de datos 
+
+        funciones de retorno multiple: cuando una funcion necesita devolver mas de un valor, se pueden pasar punteros a las variables fuera de la 
+            funcion para que puedan ser modificadas
+
+    

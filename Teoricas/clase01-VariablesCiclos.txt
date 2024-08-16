@@ -1,0 +1,132 @@
+----- Variables Ciclos y Estructuras -----
+
+Estructura de un programa en C
+
+    Un programa en C tiene basicamente la siguiente forma:
+        -comandos del procesador
+        -definiciones de tipos
+        -prototipos de funciones
+        -Variables
+        -funciones
+
+        para un programa en C se debe tener una funcion main()
+
+Tipos de datos
+
+    Dato: es cualquier objeto manipulable por la computadora 
+    Variable: objeto cuyo valor cambia durante la ejecucion del programa
+    Constante: objeto cuyo valor no cambia durante la ejecucion del programa
+
+    %i   int      tipos de datos enteros
+    %f   float    tipos de datos flotantes
+    %d   double   tipos de datos extensos en los decimales    
+    %c   char     tipos de datos caracter
+    %li  long     para numero largos
+    %i   short    para numeros cortos
+    %b   bool     tipos de datos booleanos
+    
+    %s imprime cadenas
+    %x imprime hexadecimal
+
+Operadores de asignacion
+
+    <   menor que
+    <=  menor igual que
+    ==  igual que
+    >   mayor que
+    >=  mayor igual que
+    !=  distinto que 
+
+Operadores aritmeticos
+
+    + suma
+    - resta
+    * multiplicacion
+    / division
+    % modulo
+
+Operadores logicos
+
+    &&  Y (and)
+    ||  o (or)
+    !   not
+
+ESTRUCTURA GENERAL -----
+
+    Librerias 
+
+        #include <stdio.h>  sirve para imprimir cosas por pantalla y para que el usuario 
+                            pueda cargar datos 
+
+        .h      significa que es un archivo de cabecera
+        stdio   significa STANDAR input y output
+
+    Funcion 
+
+        int main(){            Esta es la funcion principal dentro va el codigo 
+
+            return 0;
+        }
+
+    Comentarios
+
+        los comentarios de una linea se ponen usando //
+        los comentarios extensos se ponen usando /* */
+
+
+    funcion printf() imprime en la unidad de salida el texto, las constantes y las variables que se indiquen
+
+    funcion scanf() es analoga en muchos aspectos a printf y se utiliza para leer datos de entrada estandar
+
+Sentencia if
+
+    if (condicion){
+
+        acciones a realizar por verdadero ;
+    } else {
+        acciones por falso ;
+    }
+
+Sentencia if de dos alternativas
+
+    if (condicion){
+        accion por verdadero ;
+    }else if (condicion) {
+        accion por verdadero ; 
+    }else{
+        acciones a realizar por falso ;
+    }
+
+Condicion multiple SWITCH ()
+
+    switch(selector){
+
+        case etiqueta 1: acciones, break;
+        case etiqueta 2: acciones, break;
+
+        default;
+    }
+
+    nota: es importante el break ya que interrumpe las sentencias para que no se ejecuten 
+    dos sentencias a la vez
+
+Sentencia While ()
+
+    while (condicion){
+        acciones a realizar ;
+    }
+
+Bucle For ()
+
+    for (inicializacion; condicion: incremento){
+        instrucciones a realizar; 
+    }
+
+Bucle Do - While ()
+
+    do{
+        acciones a realizar ;
+    }while (condicion)
+
+    nota: para usar esta condicion algunas veces voy a necesitar crear una variable contador
+    que luego se incrementara dentro del bucle

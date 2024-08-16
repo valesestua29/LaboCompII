@@ -1,0 +1,38 @@
+/* ---- PUNTEROS ----- */
+
+Puntero: variables que almacenan la direccion de otra variable
+    
+    tipo_de_dato * nombre_del_puntero
+
+Memoria
+    Para obtener la direccion de memoria uso &
+    Zona de codigo
+        Donde se almacena la estructura para poder ejecutar el programa, es decir las instrucciones
+        que la maquina va a ejecutar
+    Zona de datos estaticos
+        Almacena las variables globales y estaticas, como tambien constantes y cadenas de caracteres
+    Zona de pila
+        Almacena las variables locales de las funciones como registros de activacion y la informacion
+        necesaria para el control de la ejecucion de las funciones 
+    Zona dinamica
+        Almacena los datos asignados dinamicamente durante la ejecucion del programa utilizando funciones
+        tiene un tamaño LIMITADO
+
+Desreferencia: es obtener el dato almacenado en la direccion contenida en el puntero 
+    Operador de desreferencia *
+
+    ejemplo: 
+        int edad=23
+        int *p;             //declaro el puntero 
+        p = &edad;          //el puntero toma la direccion de memoria de la variable
+        printf("%d", *p);   //desreferencio el puntero para obtener el valor almacenado en la variable
+                            a la que apunta ---> 23
+
+Puntero del puntero
+    un puntero a un puntero a menudo llamado puntero doble
+
+    int x = 10;
+    int *ptr1= &x;
+    int **ptr2 = &ptr1; 
+
+
