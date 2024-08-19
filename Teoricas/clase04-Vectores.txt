@@ -1,0 +1,61 @@
+---- Arreglos Unidimencionales (VECTORES) ----
+
+Un array o arreglo unidimencional es una secuencia del dato del mismo tipo, los datos se llaman 
+elementos del array y se ennumeran consecutivamente
+
+[1][2][3][4][5][6][7][8][9][10]     donde [x] es el elemento y Xi es el indice
+ 0i 1i 2i 3i 4i 5i 6i 7i 8i 9i
+
+tipo nombre_del_array [numero_de_elementos]
+float a[6]; --- sin datos especificos
+float a[6]={2; 5; 4; 7; 8; 10} ;
+
+-arrays de enteros
+-arrays de flotantes
+-array de caracteres
+-arrays de strings o palabras
+
+    ejemplo: 
+
+        #include<stdio.h>
+        #include<conio.h>   //para usar getch()
+
+        int main(){
+            int a[5]= {1,2,3,4,5};
+
+            printf("%i", a[4]);     // imprime la posicion [xi] del VECTORES
+            getch();                // sirve para que el programa termine cuando yo lo decida
+
+            return 0;
+        }
+
+Para recorrer un array uso el ciclo For (i=0; i>cant_items;i++)
+
+EJEMPLO IMPORTANTE
+
+    Copiar un array a otro
+
+    #include<stdio.h>
+    #include<conio.h>
+
+    void copia_array(int a[], int[b], int tamanio);
+
+    int main(){
+        int array1[5]= {1,2,3,4,5};
+        int array2[5];
+
+        printf("copiando arrays");
+        copia_array (array1, array2, 5);
+
+        getch();
+        return 0;
+    }
+
+    void copia_array(int a[], int b[], int tamanio){
+        int i;
+        for(i=0; i<tamanio; i++){
+            b[i]=a[i];  
+        }
+    }
+
+

@@ -28,7 +28,6 @@ Es importante usar prototipos de funciones
 
 PASAJE DE PARAMETROS ------
 
-
     Pasaje por valor
 
         int main(){
@@ -72,4 +71,37 @@ PASAJE DE PARAMETROS ------
         funciones de retorno multiple: cuando una funcion necesita devolver mas de un valor, se pueden pasar punteros a las variables fuera de la 
             funcion para que puedan ser modificadas
 
+
+
+
+Numeros Pseudoaleatorios
+
+    Los numeros pseudoaleatorios se generan de manera secuencial con un algoritmo determinado, 
+    formalmente se definen por:
+        -Funcion de inicializacion. Recibe un numero y pone al fenerador en su estado inicializacion
+        -Funcion de transicion. Transforma el estado del generador
+        -Funcion de salida. Transforma el estado para producir un numero fijo de bits
     
+    rand() , <stdlib.h>
+
+    Los numeros generaados por rand () se denominan pseudoaleatorios ya que no son verdaderamente aleatorios
+    sino que siguen una secuencia tan grande que podemos ignorarla
+
+    Funciona recordando un valor denominado semilla o seed al cual le sucede otro y a ese otro y siempre es la
+    misma secuencia
+
+    #include <stdlib.h>
+    numero = rand()%11;
+    numero = rand()%(N+1);
+
+    La operacion modulo (%) nos da el resto de dividir rand() entre 11. Este resto puede ir de 0 a 10.
+    de la misma forma, el modulo de rand() entre N+1 va de 0 a Nombre_de_la_funcion
+
+    numero = () % (maximo - minimo + 1) + minimo ;   // numeros entre minimo y maximo
+
+    Como funciona:
+        Parte de un numero inicial y obtenemos un numero que nos parece aleaotorio, pero el segundo numero que 
+        obtiene siempre es el que sigue al anterior y asi sucesivamente
+
+        Si volvemos a ejecutar el programa desde el principio, el numero inicial que usa rand() es el mismo con lo 
+        que la secuencia de numeros aleatorios es la misma, ya que la secuencia es la misma. 

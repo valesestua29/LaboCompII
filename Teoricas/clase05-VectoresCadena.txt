@@ -1,0 +1,27 @@
+------- MATRICES ------
+
+
+Vectores con cadena de caracteres
+
+    caracteristicas
+        - Una cadena es un vector de caracteres que contiene caracteres ASCII
+        - Finaliza con un caracter nulo o \0 que muchas funciones utilizan para saber
+        donde finaliza la cadena
+        - Todos los elementos son del tipo char
+
+    El caracter \0 lo agrega el sistema, no es imprimible, pero si podemos recorrer la cadena
+    de caracteres con un ciclo hasta el \0
+
+    Ingresar caracter por caracter (scanf("%c", &cadena[i]))
+
+Diferencia entre vector y puntero al vector
+
+    char *cadena = "hola mundo" 
+        Cadena es una variable inicializada para apuntar a una cadena que se aloja en una zona de solo 
+        lectura de la memoria. Puede cambiarse el apuntador
+        Intentar cambiar el contenido puede dar error  o un resultado indefinido 
+    
+    char cadena[]= "hola mundo"
+        Cadena es un puntero constante, no se puede cambiar, no es una variable
+        Puede cambiarse el contenido pero no el tamaño
+
