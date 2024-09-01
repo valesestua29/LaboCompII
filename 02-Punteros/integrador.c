@@ -14,18 +14,23 @@ El programa debera cumplir con los siguientes requisitos:
 #include <stdio.h>
 int main(){
 
-    int cant, i, num, suma=0, prod=0;
+    int cant, i, num, suma=0, prod=1;
+    int *a; 
 
     printf("Digite la cantidad de numeros a ingresar: ");
-    scanf("%d",&cant);
+    scanf("%i",&cant);
 
     for(i=0; i<cant; i++){
-        printf("Ingrese el nro %d): ");
-        scanf("%d",&num);
+        printf("Ingrese el nro %i ): ",i+1);
+        scanf("%i",&num);
 
-        suma=suma+num;
+        a = &num; 
+        suma= suma + *a;
+        prod= prod * (*a);
     }
 
+    printf("\n\n la suma de los numeros ingresados es %i", suma);
+    printf("\n\n El producto de los numeros ingresados es %i", prod);
 
     return 0;
 }
