@@ -7,7 +7,7 @@ void media(int array[], int cant);
 
 int main(){
 
-    int cant, i;
+    int cant, i ;
 
     printf("Digite la cantidad de numeros a ingresar: ");
     scanf("%i", &cant);
